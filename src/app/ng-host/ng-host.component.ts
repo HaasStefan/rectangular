@@ -5,11 +5,10 @@ import Counter from 'src/react/Counter';
 @Component({
   selector: 'ng-host',
   standalone: true,
-  imports: [ReactComponent],
+  imports: [],
   templateUrl: './ng-host.component.html',
   styleUrl: './ng-host.component.css'
 })
 export class NgHostComponent {
-  readonly Counter = Counter;
 
 }

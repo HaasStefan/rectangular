@@ -1,2 +1,2 @@
 
-export { ReactComponent } from './react.component';
+export { ReactComponent } from './components/react.component';

@@ -1,21 +1,26 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import ReactHost from './ReactHost';
+import { CounterService } from 'src/app/services/counter.service';
+import { useNgInject, useNgSignal } from '@recatangular/react';
 
 const Counter: React.FC = () => {
-	const [count, setCount] = useState(0);
+  const counterService = useNgInject(CounterService);
+	const [count, setCount] = useNgSignal(counterService.count);
+
+  console.log("render");
 
 	const increment = () => setCount(count + 1);
 	const decrement = () => setCount(count - 1);
 
 	return (
 		<ReactHost>
-			<div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
-				<h2>Counter</h2>
-				<div style={{ fontSize: '2rem' }}>{count}</div>
-				<div>
-					<button onClick={decrement} style={{ marginRight: '1rem' }}>-</button>
+			<div>
+				<div>Counter: {count}</div>
+ 				<div>
+					<button onClick={decrement}>-</button>
 					<button onClick={increment}>+</button>
+          <button>empty</button>
 				</div>
 			</div>
 		</ReactHost>

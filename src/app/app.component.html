@@ -179,7 +179,19 @@
 
 <main class="main">
   <div class="content">
-    <ng-host></ng-host>
+    <ng-host>
+      Counter: {{ count() }}
+
+      <br />
+      <button (click)="decrement()">-</button>
+      <button (click)="increment()">+</button>
+      <button>empty</button>
+
+      <br />
+      <br />
+
+      <react [component]="Counter"></react>
+    </ng-host>
   </div>
 </main>
 

@@ -3,6 +3,7 @@ import {
   Component,
   ElementRef,
   inject,
+  Injector,
   input,
   NgZone,
   OnChanges,
@@ -13,6 +14,7 @@ import {
 } from '@angular/core';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
+import { Host } from '@recatangular/react';
 
 @Component({
   selector: 'react',
@@ -23,10 +25,11 @@ import * as ReactDOM from 'react-dom/client';
 })
 export class ReactComponent implements OnInit, OnChanges, OnDestroy {
   component = input.required<React.FunctionComponent<any>>();
-  props = input<object>({})
+  props = input<object>({});
   container = viewChild<ElementRef>('container');
   private root: ReactDOM.Root | null = null;
   private readonly ngZone = inject(NgZone);
+  private readonly injector = inject(Injector);
 
   ngOnInit() {
     this.ngZone.runOutsideAngular(() => {
@@ -50,7 +53,13 @@ export class ReactComponent implements OnInit, OnChanges, OnDestroy {
   }
   private render() {
     if (this.component) {
-      this.root?.render(React.createElement(this.component(), this.props));
+      this.root?.render(
+        React.createElement(Host, {
+          injector: this.injector,
+          component: this.component(),
+          props: this.props,
+        })
+      );
     }
   }
 }
