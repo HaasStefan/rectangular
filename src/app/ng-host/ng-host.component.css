@@ -1,0 +1,6 @@
+:host {
+  border: 4px dashed rgba(204, 31, 132, 0.643);
+  padding: 16px;
+  background-color: rgba(204, 31, 132, 0.151);
+  display: inline-block;
+}
