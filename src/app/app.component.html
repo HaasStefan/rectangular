@@ -179,18 +179,7 @@
 
 <main class="main">
   <div class="content">
-    <ng-host>
-      Counter: {{ count() }}
-
-      <br />
-      <button (click)="decrement()">-</button>
-      <button (click)="increment()">+</button>
-      <button>empty</button>
-
-      <br />
-      <br />
-
-    </ng-host>
+    <ng-counter></ng-counter>
   </div>
 
   <div>
@@ -199,7 +188,7 @@
     <br />
     <br />
     <button routerLink="/404">404</button>
-    <button routerLink="/counter-async">counter-async</button>
+    <button routerLink="/counter">counter</button>
 
     <br />
     <br />

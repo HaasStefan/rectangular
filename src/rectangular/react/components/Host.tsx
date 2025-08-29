@@ -1,4 +1,4 @@
-import React from "react";
+import React, { StrictMode } from "react";
 import type { Injector } from "@angular/core";
 import { InjectorProvider } from "./InjectorProvider";
 
@@ -14,10 +14,12 @@ export const Host: React.FC<HostProps> = ({
   props,
 }) => {
   return (
-    <InjectorProvider injector={injector}>
-      <Component {...props} />
-    </InjectorProvider>
+    <StrictMode>
+      <InjectorProvider injector={injector}>
+        <Component {...props} />
+      </InjectorProvider>
+    </StrictMode>
   );
 };
-
+ 
 export default Host;
