@@ -20,6 +20,9 @@ importers:
       '@angular/core':
         specifier: ^17.2.0
         version: 17.3.12(rxjs@7.8.2)(zone.js@0.14.10)
+      '@angular/elements':
+        specifier: ^17.2.0
+        version: 17.3.12(@angular/core@17.3.12(rxjs@7.8.2)(zone.js@0.14.10))(rxjs@7.8.2)
       '@angular/forms':
         specifier: ^17.2.0
         version: 17.3.12(@angular/common@17.3.12(@angular/core@17.3.12(rxjs@7.8.2)(zone.js@0.14.10))(rxjs@7.8.2))(@angular/core@17.3.12(rxjs@7.8.2)(zone.js@0.14.10))(@angular/platform-browser@17.3.12(@angular/animations@17.3.12(@angular/core@17.3.12(rxjs@7.8.2)(zone.js@0.14.10)))(@angular/common@17.3.12(@angular/core@17.3.12(rxjs@7.8.2)(zone.js@0.14.10))(rxjs@7.8.2))(@angular/core@17.3.12(rxjs@7.8.2)(zone.js@0.14.10)))(rxjs@7.8.2)
@@ -200,6 +203,13 @@ packages:
     peerDependencies:
       rxjs: ^6.5.3 || ^7.4.0
       zone.js: ~0.14.0
+
+  '@angular/elements@17.3.12':
+    resolution: {integrity: sha512-rUfEaV+Ol0bxtcEfNuf/7aVe+3/hAVJMNF/DHG71BSekCxPSH5WR6wE0zsXmVoTBadj+TUDlsyju9o9n3+C5Vg==}
+    engines: {node: ^18.13.0 || >=20.9.0}
+    peerDependencies:
+      '@angular/core': 17.3.12
+      rxjs: ^6.5.3 || ^7.4.0
 
   '@angular/forms@17.3.12':
     resolution: {integrity: sha512-tV6r12Q3yEUlXwpVko4E+XscunTIpPkLbaiDn/MTL3Vxi2LZnsLgHyd/i38HaHN+e/H3B0a1ToSOhV5wf3ay4Q==}
@@ -4143,6 +4153,12 @@ snapshots:
       rxjs: 7.8.2
       tslib: 2.8.1
       zone.js: 0.14.10
+
+  '@angular/elements@17.3.12(@angular/core@17.3.12(rxjs@7.8.2)(zone.js@0.14.10))(rxjs@7.8.2)':
+    dependencies:
+      '@angular/core': 17.3.12(rxjs@7.8.2)(zone.js@0.14.10)
+      rxjs: 7.8.2
+      tslib: 2.8.1
 
   '@angular/forms@17.3.12(@angular/common@17.3.12(@angular/core@17.3.12(rxjs@7.8.2)(zone.js@0.14.10))(rxjs@7.8.2))(@angular/core@17.3.12(rxjs@7.8.2)(zone.js@0.14.10))(@angular/platform-browser@17.3.12(@angular/animations@17.3.12(@angular/core@17.3.12(rxjs@7.8.2)(zone.js@0.14.10)))(@angular/common@17.3.12(@angular/core@17.3.12(rxjs@7.8.2)(zone.js@0.14.10))(rxjs@7.8.2))(@angular/core@17.3.12(rxjs@7.8.2)(zone.js@0.14.10)))(rxjs@7.8.2)':
     dependencies:
