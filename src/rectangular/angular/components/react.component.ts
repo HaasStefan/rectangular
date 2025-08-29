@@ -52,7 +52,7 @@ export class ReactComponent implements OnInit, OnChanges, OnDestroy {
     });
   }
   private render() {
-    if (this.component) {
+    if (this.component()) {
       this.root?.render(
         React.createElement(Host, {
           injector: this.injector,

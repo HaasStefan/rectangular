@@ -19,3 +19,5 @@ export const Host: React.FC<HostProps> = ({
     </InjectorProvider>
   );
 };
+
+export default Host;

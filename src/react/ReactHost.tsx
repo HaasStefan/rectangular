@@ -1,6 +1,6 @@
 import React from "react";
 
-const ReactHost: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
+export const ReactHost: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
   return (
     <div
       style={{

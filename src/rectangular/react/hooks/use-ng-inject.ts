@@ -1,13 +1,11 @@
-import { inject, InjectionToken, Injector, ProviderToken } from "@angular/core";
+import { Injector, ProviderToken } from '@angular/core';
 import React from 'react';
+import { assertInNgContext } from '../utils/assert-in-ng-context';
 
 export const InjectorContext = React.createContext<Injector | null>(null);
 
 export function useNgInject<T>(token: ProviderToken<T>): T {
-  const injector = React.useContext(InjectorContext);
-  if (!injector) {
-    throw new Error("useNgInject must be used within an InjectorProvider");
-  }
-  return injector.get(token);
-}
+  assertInNgContext();
 
+  return React.useContext(InjectorContext)!.get(token);
+}

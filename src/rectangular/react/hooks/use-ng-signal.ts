@@ -8,10 +8,13 @@ import {
 } from '@angular/core';
 import { useNgInject } from './use-ng-inject';
 import { useEffect, useState } from 'react';
+import { assertInNgContext } from '../utils/assert-in-ng-context';
 
 export function useNgSignal<T>(
   signal: WritableSignal<T>
 ): [T, (value: T) => void] {
+  assertInNgContext();
+  
   const ngZone = useNgInject(NgZone);
   const injector = useNgInject(Injector);
 
