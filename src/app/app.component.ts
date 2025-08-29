@@ -1,14 +1,14 @@
 import { Component, inject } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { NgHostComponent } from './ng-host/ng-host.component';
-import { ReactComponent } from "@recatangular/angular";
+import { ReactComponent } from "@rectangular/angular";
 import Counter from 'src/react/Counter';
 import { CounterService } from './services/counter.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgHostComponent, ReactComponent],
+  imports: [RouterOutlet, NgHostComponent, RouterLink, ReactComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

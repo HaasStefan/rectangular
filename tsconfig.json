@@ -22,8 +22,8 @@
     "lib": ["ES2022", "dom"],
     "baseUrl": ".",
     "paths": {
-      "@recatangular/angular": ["src/rectangular/angular/index.ts"],
-      "@recatangular/react": ["src/rectangular/react/index.ts"]
+      "@rectangular/angular": ["src/rectangular/angular/index.ts"],
+      "@rectangular/react": ["src/rectangular/react/index.ts"]
     },
     "jsx": "react-jsx"
   },

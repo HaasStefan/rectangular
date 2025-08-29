@@ -14,7 +14,7 @@ import {
 } from '@angular/core';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
-import { Host } from '@recatangular/react';
+import { Host } from '@rectangular/react';
 
 @Component({
   selector: 'react',

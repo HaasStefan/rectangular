@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ReactComponent } from "@recatangular/angular";
+import { ReactComponent } from "@rectangular/angular";
 import Counter from 'src/react/Counter';
 
 @Component({

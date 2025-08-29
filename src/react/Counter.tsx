@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactHost from './ReactHost';
 import { CounterService } from 'src/app/services/counter.service';
-import { useNgInject, useNgSignal } from '@recatangular/react';
+import { useNgInject, useNgSignal } from '@rectangular/react';
 
 const Counter: React.FC = () => {
   const counterService = useNgInject(CounterService);
